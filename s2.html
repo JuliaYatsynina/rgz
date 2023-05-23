@@ -7,10 +7,35 @@
     <title>Яцынина Юлия Сергеевна. РГЗ</title>
     <link rel="stylesheet" href="main.css">
     <style>
-
+        .tab{
+            margin-left: 30px;
+        }
     </style>
     <script>
-
+        function shet(){
+        let data = ['3-04-2023', '4-04-2023', '5-04-2023', '6-04-2023', '7-04-2023',
+                    '10-04-2023', '11-04-2023', '12-04-2023', '13-04-2023', '14-04-2023',
+                    '17-04-2023', '18-04-2023', '19-04-2023', '20-04-2023', '21-04-2023',
+                    '24-04-2023', '25-04-2023', '26-04-2023', '27-04-2023', '28-04-2023'];
+            let kurs = [3.7775,8.8235,3.8235,3.834,3.827,3.923,3.857,3.8455,3.898,3.902,3.9565,3.966,3.9545,3.969,
+                        3.968,3.997,4.008,4.0905,4.0785,4.07];
+            let tab = document.getElementById('tab');
+            let min = Math.min(...kurs);
+            document.getElementById('min').innerHTML = 'Минимальное значение: ' + min;
+            let max = Math.max(...kurs);
+            document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+            let sum = 0;
+            for (let i = 0; i < kurs.length; i++) {
+            sum += kurs[i];
+            }
+            let avg = sum / kurs.length;
+            let variance = 0;
+            for (let i = 0; i < kurs.length; i++) {
+            variance += Math.pow(kurs[i] - avg, 2);
+            }
+            let kv = Math.sqrt(variance / kurs.length);
+            document.getElementById('kv').innerHTML = 'Среднеквадратическое отклонение: ' + kv;
+        }
     </script>
 </head>
 <body>
@@ -21,7 +46,101 @@
         </menu>
     </header>
     <main>
+        <div><b>Капитализация на конец апреля:</b> 440 411 399 999,999 рублей</div>
+        <div><b>Общее число акций, обращающихся на Московской фондовой бирже:</b> 104 400 000 000</div>
+        <div>
+            <h2>Таблица с ценами закрытия за весь апрель</h2>
+            <table class="tab" border="2" id="tab">
+                <tr>
+                    <td>03-04-2023</td>
+                    <td>3.7775</td>
+                </tr>
+                <tr>
+                    <td>04-04-2023</td>
+                    <td>3.8235</td>
+                </tr>
+                <tr>
+                    <td>05-04-2023</td>
+                    <td>3.8235</td>
+                </tr>
+                <tr>
+                    <td>06-04-2023</td>
+                    <td>3.834</td>
+                </tr>
+                <tr>
+                    <td>07-04-2023</td>
+                    <td>3.827</td>
+                </tr>
+                <tr>
+                    <td>10-04-2023</td>
+                    <td>3.923</td>
+                </tr>
+                <tr>
+                    <td>11-04-2023</td>
+                    <td>3.857</td>
+                </tr>
+                <tr>
+                    <td>12-04-2023</td>
+                    <td>3.8455</td>
+                </tr>
+                <tr>
+                    <td>13-04-2023</td>
+                    <td>3.898</td>
+                </tr>
+                <tr>
+                    <td>14-04-2023</td>
+                    <td>3.902</td>
+                </tr>
+                <tr>
+                    <td>17-04-2023</td>
+                    <td>3.9565</td>
+                </tr>
+                <tr>
+                    <td>18-04-2023</td>
+                    <td>3.966</td>
+                </tr>
+                <tr>
+                    <td>19-04-2023</td>
+                    <td>3.9545</td>
+                </tr>
+                <tr>
+                    <td>20-04-2023</td>
+                    <td>3.969</td>
+                </tr>
+                <tr>
+                    <td>21-04-2023</td>
+                    <td>3.968</td>
+                </tr>
+                <tr>
+                    <td>24-04-2023</td>
+                    <td>3.997</td>
+                </tr>
+                <tr>
+                    <td>25-04-2023</td>
+                    <td>4.008</td>
+                </tr>
+                <tr>
+                    <td>26-04-2023</td>
+                    <td>4.0905</td>
+                </tr>
+                <tr>
+                    <td>27-04-2023</td>
+                    <td>4.0785</td>
+                </tr>
+                <tr>
+                    <td>28-04-2023</td>
+                    <td>4.07</td>
+                </tr>
+
+            </table>
+        </div>
+        <button onclick="shet()">Вычислить</button>
+        <div id="min" style="color: #f28d01;">Минимальное значение: </div>
+        <div id="max" style="color: #f28d01;">Максимальное значение: </div>
+        <div id="kv" style="color: #f28d01;">Среднеквадратическое отклонение: </div>
         
+
+
     </main>
     <footer>
         &copy; Юлия Яцынина, ФБИ-14, 2 курс, 2023

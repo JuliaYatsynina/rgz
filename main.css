@@ -3,14 +3,14 @@ body {
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    margin: 0px 0px 25px;
+    margin: 0px 0px 15px;
     line-height: 150%;
     text-indent: 25px;
 }
 
 main {
-    margin: 20px;
-    padding: 20px;
+    margin: 1.2%;
+    padding: 1.2%;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
     color: black;
     font-size: 12pt;
     position: relative;
-    margin: -20px 0px 0px 0px;
+    margin: -5px 0px 0px -30px;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
 }
@@ -42,12 +42,12 @@ footer {
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    margin-right: 20px;
     font-weight: bold;
     position: relative;
     top: -20px;
     font-size: 18px;
     margin-left: 45px;
+    padding: 10px;
 }
 
 a:hover {
@@ -57,3 +57,14 @@ a:hover {
     transition: 0.3s;
     border-radius: 18px;
 }
+
+menu{
+    background: #f28d01;
+    color: rgb(255, 255, 255);
+    font-size: 12pt;
+    position: relative;
+    margin: -20px 0px 0px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
